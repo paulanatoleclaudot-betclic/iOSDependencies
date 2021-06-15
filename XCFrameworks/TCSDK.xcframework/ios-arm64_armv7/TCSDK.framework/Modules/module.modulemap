@@ -1,6 +1,0 @@
-framework module TCSDK {
-  umbrella header "TCSDK.h"
-
-  export *
-  module * { export * }
-}

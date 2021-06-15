@@ -3,31 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "BetclicDependencies",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
-        .library(
-            name: "TCCore",
-            targets: [
-                "TCCore"
-            ]
-        ),
-        .library(
-            name: "TCIAB",
-            targets: [
-                "TCIAB"
-            ]
-        ),
-        .library(
-            name: "TCPrivacy",
-            targets: [
-                "TCPrivacy"
-            ]
-        ),
-        .library(
-            name: "TCSDK",
-            targets: [
-                "TCSDK"
-            ]
-        ),
         .library(
             name: "ServiceCore",
             targets: [
@@ -42,22 +21,6 @@ let package = Package(
         )
     ],
     targets: [
-        .binaryTarget(
-            name: "TCCore",
-            path: "./XCFrameworks/TCCore.xcframework"
-        ),
-        .binaryTarget(
-            name: "TCIAB",
-            path: "./XCFrameworks/TCIAB.xcframework"
-        ),
-        .binaryTarget(
-            name: "TCPrivacy",
-            path: "./XCFrameworks/TCPrivacy.xcframework"
-        ),
-        .binaryTarget(
-            name: "TCSDK",
-            path: "./XCFrameworks/TCSDK.xcframework"
-        ),
         .binaryTarget(
             name: "ServiceCore",
             path: "./XCFrameworks/ServiceCore.xcframework"
